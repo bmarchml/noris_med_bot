@@ -23,7 +23,7 @@ class Database:
             result = self.cursor.execute("SELECT 'signup' FROM 'test' WHERE 'user_id' = ?", (user_id,)).fetchall()
             for row in result:
                 signup = str(row[0])
-            return  signup
+            return signup
 
     def set_signup(self, user_id, signup):
         with self.connection:

@@ -9,11 +9,11 @@ logging.basicConfig(level=logging.INFO)
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
-db = Database('database.db')
+db = Database('db.db')
 
 @dp.message_handler(commands=['start'])
 async def start(message: types.Message):
-    if(not db.user_exist(message.from_user.id)):
+    if(not db.user_exists(message.from_user.id)):
         db.add_user(message.from_user.id)
         await bot.send_message(message.from_user.id, 'Укажите Ваше ФИО')
     else:
@@ -39,4 +39,4 @@ async def start(message: types.Message):
                 await bot.send_message(message.from_user.id, 'Что?')
 
 if __name__ == "__main__":
-    executor.start_polling(db, skip_updates = True)
+    executor.start_polling(dp, skip_updates = True)
