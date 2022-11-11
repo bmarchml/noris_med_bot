@@ -7,7 +7,7 @@ class Database:
 
     def add_user(self, user_id):
         with self.connection:
-            self.cursor.execute("INSERT INTO 'test' ('user_id') VALUES (?)", (user_id,))
+            return self.cursor.execute("INSERT INTO 'test' ('user_id') VALUES (?)", (user_id,))
 
     def user_exists(self, user_id):
         with self.connection:
