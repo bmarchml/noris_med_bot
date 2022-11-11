@@ -26,8 +26,8 @@ async def start(message: types.Message):
             pass
 
         else:
-            if db.get_signup(message.from_user.id) == 'setnickname':
-                if (len(message.text) > 15):
+            if db.get_signup(message.from_user.id) == "setnickname":
+                if len(message.text) > 15:
                     await bot.send_message(message.from_user.id, 'ФИО слишком большое')
                 elif '@' in message.text or '/' in message.text:
                     await bot.send_message(message.from_user.id, 'Вы ввели запрещенный символ')
