@@ -1,6 +1,7 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-btnProfile = KeyboardButton(' Профиль')
+btnProfile = KeyboardButton(' Профиль ')
+btnSmena = KeyboardButton('Сменить ')
 
-mainMenu = ReplyKeyboardMarkup(resize_keyboard = True)
-mainMenu.add(btnProfile)
+mainMenu = ReplyKeyboardMarkup(resize_keyboard=True)
+mainMenu.add(btnProfile, btnSmena)
