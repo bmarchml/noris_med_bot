@@ -3,7 +3,7 @@ from aiogram import Bot, Dispatcher, executor, types
 import markups as nav
 from db import Databasse
 
-TOKEN = '5548537514:AAGlKbQi0DgjlHCDaZq83yG0xwcXwE-TqCo'
+TOKEN = ''
 
 logging.basicConfig(level=logging.INFO)
 
